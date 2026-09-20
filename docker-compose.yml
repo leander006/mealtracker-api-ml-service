@@ -1,0 +1,21 @@
+# Standalone compose for this repo. Since ml-service, backend, and ui live
+# in separate git repos/deployments (Render x2, Vercel), this only runs
+# ml-service itself - it talks to your Neon databases directly (not to
+# sibling containers), so there's nothing else to declare here.
+#
+# Usage: cp .env.example .env, fill it in, then: docker compose up --build
+
+services:
+  ml-service:
+    build:
+      context: .
+      args:
+        # Set to "true" once you have DETECTOR_MODE=real and need torch/ultralytics.
+        # Left false so `docker compose up --build` stays fast for local mock testing.
+        INSTALL_REAL_DETECTOR: "false"
+    ports:
+      - "8000:8000"
+    env_file:
+      - .env
+    volumes:
+      - ./weights:/app/weights  # trained .pt file survives container rebuilds locally

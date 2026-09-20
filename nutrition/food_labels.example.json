@@ -1,0 +1,32 @@
+[
+  {
+    "model_label": "fried_rice",
+    "search_query": "rice, fried, no meat",
+    "typical_serving_g": 200,
+    "density_g_cm3": 0.9
+  },
+  {
+    "model_label": "grilled_chicken_breast",
+    "search_query": "chicken, broilers or fryers, breast, meat only, cooked, grilled",
+    "typical_serving_g": 150,
+    "density_g_cm3": 1.05
+  },
+  {
+    "model_label": "pizza_slice",
+    "search_query": "pizza, cheese, regular crust",
+    "typical_serving_g": 120,
+    "density_g_cm3": 0.75
+  },
+  {
+    "model_label": "roti",
+    "search_query": "bread, whole-wheat, flatbread",
+    "typical_serving_g": 40,
+    "density_g_cm3": 0.6
+  },
+  {
+    "model_label": "dal",
+    "search_query": "lentils, mature seeds, cooked, boiled",
+    "typical_serving_g": 180,
+    "density_g_cm3": 0.95
+  }
+]
