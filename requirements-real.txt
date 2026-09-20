@@ -1,0 +1,13 @@
+# Only needed for DETECTOR_MODE=real. Kept separate from requirements.txt
+# so local dev/testing in mock mode never has to download torch (~200MB+
+# even CPU-only) or wait on it.
+#
+# --extra-index-url pins pip to PyTorch's official CPU-only wheel index.
+# Without this, plain `pip install torch` on Linux can resolve a CUDA build
+# that drags in several hundred MB of nvidia-* packages you don't need
+# (no GPU in a standard Docker container / Render / EC2 free tier) - that
+# bloat is very likely what caused your timeout.
+--extra-index-url https://download.pytorch.org/whl/cpu
+torch
+torchvision
+ultralytics==8.2.103

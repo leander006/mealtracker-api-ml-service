@@ -1,0 +1,30 @@
+# Ultralytics dataset config. Paths are relative to this file's location.
+# Populate images/train, images/val (and matching labels/train, labels/val
+# in YOLO .txt format: "class_id x_center y_center width height", all
+# normalized 0-1) before running train.py.
+
+path: ./dataset
+train: images/train
+val: images/val
+
+names:
+  0: fried_rice
+  1: grilled_chicken_breast
+  2: pizza_slice
+  3: roti
+  4: dal
+  5: oats
+  6: paneer_curry
+  7: curd
+  8: protein_shake
+  9: grilled_fish
+  10: sweet_potato
+  11: almonds
+  12: chole
+  # NOTE: your capsule mentioned "7 original classes" without listing all 7
+  # by name - only fried_rice/grilled_chicken_breast/pizza_slice/roti/dal
+  # were named earlier in this conversation. Fill in the remaining 2 original
+  # classes here (ids 13-14) before training, and make sure this list's order
+  # matches whatever labeling tool you annotate with - class IDs must be
+  # consistent between this file and your label .txt files or training will
+  # silently learn the wrong names.

@@ -1,5 +1,9 @@
-venv/
 __pycache__/
 *.pyc
-training/data/
-training/data_subset/
+.env
+.venv/
+venv/
+models/*.pt
+data/uploaded_images/
+.pytest_cache/
+*.egg-info/
