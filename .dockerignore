@@ -1,0 +1,7 @@
+venv/
+__pycache__/
+*.pyc
+training/data/
+training/data_subset/
+.git/
+.gitignore
